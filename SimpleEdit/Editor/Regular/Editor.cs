@@ -1,6 +1,6 @@
-﻿using SimpleEdit.Dialogs;
+﻿using SimpleEdit;
+using SimpleEdit.Dialogs;
 using SimpleEdit.Lib;
-using SimpleEdit;
 using System.Diagnostics;
 using System.Windows.Forms;
 using static SimpleEdit.Lib.Layer;
