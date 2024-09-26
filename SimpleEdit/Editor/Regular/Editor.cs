@@ -131,34 +131,33 @@ namespace SimpleEdit
             if (OpenImage == null)
                 return;
             info.Text = $" Image Size (Width: {OpenImage.Width} Height: {OpenImage.Height}) Cursor Position : (X : {e.X} Y : {e.Y}) |";
-            return;
-            //DrawGrid();
-            //if (Program.editor.DrawCursorGrid)
-            //{
-            //    Canvas.Refresh();
-            //    using (var g = Canvas.CreateGraphics())
-            //    {
-            //        // Draw on X Axis
-            //        g.DrawLine(new Pen(Program.editor.CursorLineColor, Program.editor.CursorLineTickness), new Point(e.X, 0), new Point(e.X, e.Y));
-            //        // Draw on Y Axis
-            //        g.DrawLine(new Pen(Program.editor.CursorLineColor, Program.editor.CursorLineTickness), new Point(0, e.Y), new Point(e.X, e.Y));
-            //    }
-            //}
+            DrawGrid();
+            if (Program.editor.DrawCursorGrid)
+            {
+                Canvas.Refresh();
+                using (var g = Canvas.CreateGraphics())
+                {
+                    // Draw on X Axis
+                    g.DrawLine(new Pen(Program.editor.CursorLineColor, Program.editor.CursorLineTickness), new Point(e.X, 0), new Point(e.X, e.Y));
+                    // Draw on Y Axis
+                    g.DrawLine(new Pen(Program.editor.CursorLineColor, Program.editor.CursorLineTickness), new Point(0, e.Y), new Point(e.X, e.Y));
+                }
+            }
 
-            //if (ColorPreview)
-            //{
-            //    using (var bmap = new Bitmap(1, 1))
-            //    {
-            //        using (var g = Graphics.FromImage(bmap))
-            //        {
-            //            g.CopyFromScreen(e.Location, Point.Empty, new Size(1, 1));
-            //            using (var hx = Canvas.CreateGraphics())
-            //            {
-            //                hx.FillEllipse(new SolidBrush(bmap.GetPixel(0, 0)), e.X + 5, e.Y + 10, 40, 40);
-            //            }
-            //        }
-            //    }
-            //}
+            if (ColorPreview)
+            {
+                using (var bmap = new Bitmap(1, 1))
+                {
+                    using (var g = Graphics.FromImage(bmap))
+                    {
+                        g.CopyFromScreen(e.Location, Point.Empty, new Size(1, 1));
+                        using (var hx = Canvas.CreateGraphics())
+                        {
+                            hx.FillEllipse(new SolidBrush(bmap.GetPixel(0, 0)), e.X + 5, e.Y + 10, 40, 40);
+                        }
+                    }
+                }
+            }
 
 
             return;

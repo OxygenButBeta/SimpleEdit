@@ -31,40 +31,6 @@
             Canvas = new PictureBox();
             panel1 = new Panel();
             checkBox1 = new CheckBox();
-            Options = new TabControl();
-            tabPage1 = new TabPage();
-            button3 = new Button();
-            panel3 = new Panel();
-            button2 = new Button();
-            BrightnessBar = new TrackBar();
-            label8 = new Label();
-            button5 = new Button();
-            gamma_Track = new TrackBar();
-            label2 = new Label();
-            button4 = new Button();
-            UndoSaturation = new Button();
-            Saturation_t = new TrackBar();
-            label6 = new Label();
-            B_Track = new TrackBar();
-            label5 = new Label();
-            G_Track = new TrackBar();
-            label4 = new Label();
-            label3 = new Label();
-            R_Track = new TrackBar();
-            label1 = new Label();
-            tabPage2 = new TabPage();
-            Invert = new CheckBox();
-            BlackOnly = new CheckBox();
-            button1 = new Button();
-            verticalflip = new CheckBox();
-            MirrorEffect = new CheckBox();
-            label12 = new Label();
-            ImHei = new Label();
-            imheight = new TextBox();
-            ImWid = new Label();
-            button7 = new Button();
-            label7 = new Label();
-            imwidht = new TextBox();
             menuStrip1 = new MenuStrip();
             fileToolStripMenuItem = new ToolStripMenuItem();
             openToolStripMenuItem = new ToolStripMenuItem();
@@ -86,9 +52,45 @@
             Remaning = new Label();
             RenderView = new Panel();
             button6 = new Button();
+            tabPage1 = new TabPage();
+            button3 = new Button();
+            panel3 = new Panel();
+            button2 = new Button();
+            BrightnessBar = new TrackBar();
+            label8 = new Label();
+            button5 = new Button();
+            gamma_Track = new TrackBar();
+            label2 = new Label();
+            button4 = new Button();
+            UndoSaturation = new Button();
+            Saturation_t = new TrackBar();
+            label6 = new Label();
+            B_Track = new TrackBar();
+            label5 = new Label();
+            G_Track = new TrackBar();
+            label4 = new Label();
+            label3 = new Label();
+            R_Track = new TrackBar();
+            label1 = new Label();
+            Options = new TabControl();
+            tabPage2 = new TabPage();
+            Invert = new CheckBox();
+            BlackOnly = new CheckBox();
+            button1 = new Button();
+            verticalflip = new CheckBox();
+            MirrorEffect = new CheckBox();
+            label12 = new Label();
+            ImHei = new Label();
+            imheight = new TextBox();
+            imwidht = new TextBox();
+            ImWid = new Label();
+            button7 = new Button();
+            label7 = new Label();
             ((System.ComponentModel.ISupportInitialize)Canvas).BeginInit();
             panel1.SuspendLayout();
-            Options.SuspendLayout();
+            menuStrip1.SuspendLayout();
+            panel2.SuspendLayout();
+            RenderView.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)BrightnessBar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)gamma_Track).BeginInit();
@@ -96,10 +98,8 @@
             ((System.ComponentModel.ISupportInitialize)B_Track).BeginInit();
             ((System.ComponentModel.ISupportInitialize)G_Track).BeginInit();
             ((System.ComponentModel.ISupportInitialize)R_Track).BeginInit();
+            Options.SuspendLayout();
             tabPage2.SuspendLayout();
-            menuStrip1.SuspendLayout();
-            panel2.SuspendLayout();
-            RenderView.SuspendLayout();
             SuspendLayout();
             // 
             // Canvas
@@ -140,16 +140,188 @@
             checkBox1.UseVisualStyleBackColor = true;
             checkBox1.CheckedChanged += checkBox1_CheckedChanged_1;
             // 
-            // Options
+            // menuStrip1
             // 
-            Options.Controls.Add(tabPage1);
-            Options.Controls.Add(tabPage2);
-            Options.Dock = DockStyle.Right;
-            Options.Location = new Point(1198, 24);
-            Options.Name = "Options";
-            Options.SelectedIndex = 0;
-            Options.Size = new Size(248, 576);
-            Options.TabIndex = 0;
+            menuStrip1.BackColor = Color.White;
+            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, canvasToolStripMenuItem, settingsToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(1446, 24);
+            menuStrip1.TabIndex = 4;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { openToolStripMenuItem, saveToolStripMenuItem, saveAsToolStripMenuItem });
+            fileToolStripMenuItem.ForeColor = Color.DimGray;
+            fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            fileToolStripMenuItem.Size = new Size(37, 20);
+            fileToolStripMenuItem.Text = "File";
+            // 
+            // openToolStripMenuItem
+            // 
+            openToolStripMenuItem.Name = "openToolStripMenuItem";
+            openToolStripMenuItem.Size = new Size(114, 22);
+            openToolStripMenuItem.Text = "Open";
+            openToolStripMenuItem.Click += openToolStripMenuItem_Click_1;
+            // 
+            // saveToolStripMenuItem
+            // 
+            saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            saveToolStripMenuItem.Size = new Size(114, 22);
+            saveToolStripMenuItem.Text = "Save";
+            saveToolStripMenuItem.Click += saveToolStripMenuItem_Click;
+            // 
+            // saveAsToolStripMenuItem
+            // 
+            saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
+            saveAsToolStripMenuItem.Size = new Size(114, 22);
+            saveAsToolStripMenuItem.Text = "Save As";
+            saveAsToolStripMenuItem.Click += saveAsToolStripMenuItem_Click;
+            // 
+            // canvasToolStripMenuItem
+            // 
+            canvasToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { sizeModeToolStripMenuItem, backgroundColorToolStripMenuItem });
+            canvasToolStripMenuItem.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            canvasToolStripMenuItem.ForeColor = Color.DimGray;
+            canvasToolStripMenuItem.Name = "canvasToolStripMenuItem";
+            canvasToolStripMenuItem.Size = new Size(61, 20);
+            canvasToolStripMenuItem.Text = "Canvas";
+            // 
+            // sizeModeToolStripMenuItem
+            // 
+            sizeModeToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { normalToolStripMenuItem, strectToolStripMenuItem, zoomToolStripMenuItem, centerToolStripMenuItem });
+            sizeModeToolStripMenuItem.Name = "sizeModeToolStripMenuItem";
+            sizeModeToolStripMenuItem.Size = new Size(140, 22);
+            sizeModeToolStripMenuItem.Text = "Size Mode";
+            // 
+            // normalToolStripMenuItem
+            // 
+            normalToolStripMenuItem.Name = "normalToolStripMenuItem";
+            normalToolStripMenuItem.Size = new Size(115, 22);
+            normalToolStripMenuItem.Text = "Normal";
+            normalToolStripMenuItem.Click += normalToolStripMenuItem_Click;
+            // 
+            // strectToolStripMenuItem
+            // 
+            strectToolStripMenuItem.Name = "strectToolStripMenuItem";
+            strectToolStripMenuItem.Size = new Size(115, 22);
+            strectToolStripMenuItem.Text = "Strecth";
+            strectToolStripMenuItem.Click += strectToolStripMenuItem_Click;
+            // 
+            // zoomToolStripMenuItem
+            // 
+            zoomToolStripMenuItem.Name = "zoomToolStripMenuItem";
+            zoomToolStripMenuItem.Size = new Size(115, 22);
+            zoomToolStripMenuItem.Text = "Zoom";
+            zoomToolStripMenuItem.Click += zoomToolStripMenuItem_Click_1;
+            // 
+            // centerToolStripMenuItem
+            // 
+            centerToolStripMenuItem.Name = "centerToolStripMenuItem";
+            centerToolStripMenuItem.Size = new Size(115, 22);
+            centerToolStripMenuItem.Text = "Center";
+            centerToolStripMenuItem.Click += centerToolStripMenuItem_Click;
+            // 
+            // backgroundColorToolStripMenuItem
+            // 
+            backgroundColorToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { colorToolStripMenuItem });
+            backgroundColorToolStripMenuItem.Name = "backgroundColorToolStripMenuItem";
+            backgroundColorToolStripMenuItem.Size = new Size(140, 22);
+            backgroundColorToolStripMenuItem.Text = "Background";
+            // 
+            // colorToolStripMenuItem
+            // 
+            colorToolStripMenuItem.Name = "colorToolStripMenuItem";
+            colorToolStripMenuItem.Size = new Size(104, 22);
+            colorToolStripMenuItem.Text = "Color";
+            colorToolStripMenuItem.Click += colorToolStripMenuItem_Click;
+            // 
+            // settingsToolStripMenuItem
+            // 
+            settingsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { visualSettingsToolStripMenuItem });
+            settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            settingsToolStripMenuItem.Size = new Size(61, 20);
+            settingsToolStripMenuItem.Text = "Settings";
+            // 
+            // visualSettingsToolStripMenuItem
+            // 
+            visualSettingsToolStripMenuItem.Name = "visualSettingsToolStripMenuItem";
+            visualSettingsToolStripMenuItem.Size = new Size(150, 22);
+            visualSettingsToolStripMenuItem.Text = "Visual Settings";
+            visualSettingsToolStripMenuItem.Click += visualSettingsToolStripMenuItem_Click;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.Transparent;
+            panel2.Controls.Add(taskinf);
+            panel2.Controls.Add(info);
+            panel2.Dock = DockStyle.Bottom;
+            panel2.Location = new Point(34, 578);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1164, 22);
+            panel2.TabIndex = 3;
+            // 
+            // taskinf
+            // 
+            taskinf.AutoSize = true;
+            taskinf.Dock = DockStyle.Right;
+            taskinf.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            taskinf.ForeColor = Color.Black;
+            taskinf.Location = new Point(1071, 0);
+            taskinf.Name = "taskinf";
+            taskinf.Size = new Size(93, 15);
+            taskinf.TabIndex = 24;
+            taskinf.Text = "Rendering %60";
+            taskinf.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // info
+            // 
+            info.AutoSize = true;
+            info.Dock = DockStyle.Left;
+            info.ForeColor = Color.Black;
+            info.Location = new Point(0, 0);
+            info.Name = "info";
+            info.Size = new Size(91, 15);
+            info.TabIndex = 0;
+            info.Text = "Curson Position";
+            // 
+            // Remaning
+            // 
+            Remaning.AutoSize = true;
+            Remaning.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Remaning.ForeColor = Color.Black;
+            Remaning.Location = new Point(3, 8);
+            Remaning.Name = "Remaning";
+            Remaning.Size = new Size(226, 16);
+            Remaning.TabIndex = 1;
+            Remaning.Text = "Resizing & Rendering For Saving.. %60";
+            Remaning.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // RenderView
+            // 
+            RenderView.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            RenderView.AutoSize = true;
+            RenderView.BackColor = Color.WhiteSmoke;
+            RenderView.Controls.Add(Remaning);
+            RenderView.Controls.Add(button6);
+            RenderView.Location = new Point(455, 495);
+            RenderView.Name = "RenderView";
+            RenderView.Size = new Size(360, 32);
+            RenderView.TabIndex = 5;
+            RenderView.Visible = false;
+            // 
+            // button6
+            // 
+            button6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            button6.Font = new Font("Segoe UI", 8.25F);
+            button6.Location = new Point(283, 4);
+            button6.Name = "button6";
+            button6.Size = new Size(74, 24);
+            button6.TabIndex = 23;
+            button6.Text = "Cancel ";
+            button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
             // 
             // tabPage1
             // 
@@ -184,7 +356,7 @@
             // 
             button3.Anchor = AnchorStyles.Bottom;
             button3.Font = new Font("Segoe UI", 8.25F);
-            button3.Location = new Point(23, 504);
+            button3.Location = new Point(23, 427);
             button3.Name = "button3";
             button3.Size = new Size(203, 20);
             button3.TabIndex = 24;
@@ -196,7 +368,7 @@
             // 
             panel3.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             panel3.BackColor = Color.WhiteSmoke;
-            panel3.Location = new Point(6, 170);
+            panel3.Location = new Point(6, 132);
             panel3.Name = "panel3";
             panel3.Size = new Size(231, 5);
             panel3.TabIndex = 23;
@@ -396,6 +568,17 @@
             label1.TabIndex = 0;
             label1.Text = "Saturation";
             // 
+            // Options
+            // 
+            Options.Controls.Add(tabPage1);
+            Options.Controls.Add(tabPage2);
+            Options.Dock = DockStyle.Right;
+            Options.Location = new Point(1198, 24);
+            Options.Name = "Options";
+            Options.SelectedIndex = 0;
+            Options.Size = new Size(248, 576);
+            Options.TabIndex = 0;
+            // 
             // tabPage2
             // 
             tabPage2.BackColor = Color.White;
@@ -407,10 +590,10 @@
             tabPage2.Controls.Add(label12);
             tabPage2.Controls.Add(ImHei);
             tabPage2.Controls.Add(imheight);
+            tabPage2.Controls.Add(imwidht);
             tabPage2.Controls.Add(ImWid);
             tabPage2.Controls.Add(button7);
             tabPage2.Controls.Add(label7);
-            tabPage2.Controls.Add(imwidht);
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
             tabPage2.Size = new Size(240, 548);
@@ -510,6 +693,15 @@
             imheight.Size = new Size(47, 22);
             imheight.TabIndex = 17;
             // 
+            // imwidht
+            // 
+            imwidht.BorderStyle = BorderStyle.FixedSingle;
+            imwidht.Font = new Font("Arial", 9.75F);
+            imwidht.Location = new Point(62, 33);
+            imwidht.Name = "imwidht";
+            imwidht.Size = new Size(47, 22);
+            imwidht.TabIndex = 0;
+            // 
             // ImWid
             // 
             ImWid.AutoSize = true;
@@ -542,198 +734,6 @@
             label7.TabIndex = 14;
             label7.Text = "Size";
             // 
-            // imwidht
-            // 
-            imwidht.BorderStyle = BorderStyle.FixedSingle;
-            imwidht.Font = new Font("Arial", 9.75F);
-            imwidht.Location = new Point(62, 33);
-            imwidht.Name = "imwidht";
-            imwidht.Size = new Size(47, 22);
-            imwidht.TabIndex = 0;
-            // 
-            // menuStrip1
-            // 
-            menuStrip1.BackColor = Color.White;
-            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, canvasToolStripMenuItem, settingsToolStripMenuItem });
-            menuStrip1.Location = new Point(0, 0);
-            menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1446, 24);
-            menuStrip1.TabIndex = 4;
-            menuStrip1.Text = "menuStrip1";
-            // 
-            // fileToolStripMenuItem
-            // 
-            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { openToolStripMenuItem, saveToolStripMenuItem, saveAsToolStripMenuItem });
-            fileToolStripMenuItem.ForeColor = Color.DimGray;
-            fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            fileToolStripMenuItem.Size = new Size(37, 20);
-            fileToolStripMenuItem.Text = "File";
-            // 
-            // openToolStripMenuItem
-            // 
-            openToolStripMenuItem.Name = "openToolStripMenuItem";
-            openToolStripMenuItem.Size = new Size(114, 22);
-            openToolStripMenuItem.Text = "Open";
-            openToolStripMenuItem.Click += openToolStripMenuItem_Click_1;
-            // 
-            // saveToolStripMenuItem
-            // 
-            saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            saveToolStripMenuItem.Size = new Size(114, 22);
-            saveToolStripMenuItem.Text = "Save";
-            saveToolStripMenuItem.Click += saveToolStripMenuItem_Click;
-            // 
-            // saveAsToolStripMenuItem
-            // 
-            saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            saveAsToolStripMenuItem.Size = new Size(114, 22);
-            saveAsToolStripMenuItem.Text = "Save As";
-            saveAsToolStripMenuItem.Click += saveAsToolStripMenuItem_Click;
-            // 
-            // canvasToolStripMenuItem
-            // 
-            canvasToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { sizeModeToolStripMenuItem, backgroundColorToolStripMenuItem });
-            canvasToolStripMenuItem.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            canvasToolStripMenuItem.ForeColor = Color.DimGray;
-            canvasToolStripMenuItem.Name = "canvasToolStripMenuItem";
-            canvasToolStripMenuItem.Size = new Size(61, 20);
-            canvasToolStripMenuItem.Text = "Canvas";
-            // 
-            // sizeModeToolStripMenuItem
-            // 
-            sizeModeToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { normalToolStripMenuItem, strectToolStripMenuItem, zoomToolStripMenuItem, centerToolStripMenuItem });
-            sizeModeToolStripMenuItem.Name = "sizeModeToolStripMenuItem";
-            sizeModeToolStripMenuItem.Size = new Size(140, 22);
-            sizeModeToolStripMenuItem.Text = "Size Mode";
-            // 
-            // normalToolStripMenuItem
-            // 
-            normalToolStripMenuItem.Name = "normalToolStripMenuItem";
-            normalToolStripMenuItem.Size = new Size(115, 22);
-            normalToolStripMenuItem.Text = "Normal";
-            normalToolStripMenuItem.Click += normalToolStripMenuItem_Click;
-            // 
-            // strectToolStripMenuItem
-            // 
-            strectToolStripMenuItem.Name = "strectToolStripMenuItem";
-            strectToolStripMenuItem.Size = new Size(115, 22);
-            strectToolStripMenuItem.Text = "Strecth";
-            strectToolStripMenuItem.Click += strectToolStripMenuItem_Click;
-            // 
-            // zoomToolStripMenuItem
-            // 
-            zoomToolStripMenuItem.Name = "zoomToolStripMenuItem";
-            zoomToolStripMenuItem.Size = new Size(115, 22);
-            zoomToolStripMenuItem.Text = "Zoom";
-            zoomToolStripMenuItem.Click += zoomToolStripMenuItem_Click_1;
-            // 
-            // centerToolStripMenuItem
-            // 
-            centerToolStripMenuItem.Name = "centerToolStripMenuItem";
-            centerToolStripMenuItem.Size = new Size(115, 22);
-            centerToolStripMenuItem.Text = "Center";
-            centerToolStripMenuItem.Click += centerToolStripMenuItem_Click;
-            // 
-            // backgroundColorToolStripMenuItem
-            // 
-            backgroundColorToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { colorToolStripMenuItem });
-            backgroundColorToolStripMenuItem.Name = "backgroundColorToolStripMenuItem";
-            backgroundColorToolStripMenuItem.Size = new Size(140, 22);
-            backgroundColorToolStripMenuItem.Text = "Background";
-            // 
-            // colorToolStripMenuItem
-            // 
-            colorToolStripMenuItem.Name = "colorToolStripMenuItem";
-            colorToolStripMenuItem.Size = new Size(104, 22);
-            colorToolStripMenuItem.Text = "Color";
-            colorToolStripMenuItem.Click += colorToolStripMenuItem_Click;
-            // 
-            // settingsToolStripMenuItem
-            // 
-            settingsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { visualSettingsToolStripMenuItem });
-            settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            settingsToolStripMenuItem.Size = new Size(61, 20);
-            settingsToolStripMenuItem.Text = "Settings";
-            // 
-            // visualSettingsToolStripMenuItem
-            // 
-            visualSettingsToolStripMenuItem.Name = "visualSettingsToolStripMenuItem";
-            visualSettingsToolStripMenuItem.Size = new Size(150, 22);
-            visualSettingsToolStripMenuItem.Text = "Visual Settings";
-            visualSettingsToolStripMenuItem.Click += visualSettingsToolStripMenuItem_Click;
-            // 
-            // panel2
-            // 
-            panel2.BackColor = Color.Transparent;
-            panel2.Controls.Add(taskinf);
-            panel2.Controls.Add(info);
-            panel2.Dock = DockStyle.Bottom;
-            panel2.Location = new Point(34, 578);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(1164, 22);
-            panel2.TabIndex = 3;
-            // 
-            // taskinf
-            // 
-            taskinf.AutoSize = true;
-            taskinf.Dock = DockStyle.Right;
-            taskinf.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            taskinf.ForeColor = Color.Black;
-            taskinf.Location = new Point(1071, 0);
-            taskinf.Name = "taskinf";
-            taskinf.Size = new Size(93, 15);
-            taskinf.TabIndex = 24;
-            taskinf.Text = "Rendering %60";
-            taskinf.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // info
-            // 
-            info.AutoSize = true;
-            info.Dock = DockStyle.Left;
-            info.ForeColor = Color.Black;
-            info.Location = new Point(0, 0);
-            info.Name = "info";
-            info.Size = new Size(91, 15);
-            info.TabIndex = 0;
-            info.Text = "Curson Position";
-            // 
-            // Remaning
-            // 
-            Remaning.AutoSize = true;
-            Remaning.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Remaning.ForeColor = Color.Black;
-            Remaning.Location = new Point(3, 8);
-            Remaning.Name = "Remaning";
-            Remaning.Size = new Size(226, 16);
-            Remaning.TabIndex = 1;
-            Remaning.Text = "Resizing & Rendering For Saving.. %60";
-            Remaning.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // RenderView
-            // 
-            RenderView.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            RenderView.AutoSize = true;
-            RenderView.BackColor = Color.WhiteSmoke;
-            RenderView.Controls.Add(Remaning);
-            RenderView.Controls.Add(button6);
-            RenderView.Location = new Point(455, 495);
-            RenderView.Name = "RenderView";
-            RenderView.Size = new Size(360, 32);
-            RenderView.TabIndex = 5;
-            RenderView.Visible = false;
-            // 
-            // button6
-            // 
-            button6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button6.Font = new Font("Segoe UI", 8.25F);
-            button6.Location = new Point(283, 4);
-            button6.Name = "button6";
-            button6.Size = new Size(74, 24);
-            button6.TabIndex = 23;
-            button6.Text = "Cancel ";
-            button6.UseVisualStyleBackColor = true;
-            button6.Click += button6_Click;
-            // 
             // Editor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -754,7 +754,12 @@
             ((System.ComponentModel.ISupportInitialize)Canvas).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            Options.ResumeLayout(false);
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            RenderView.ResumeLayout(false);
+            RenderView.PerformLayout();
             tabPage1.ResumeLayout(false);
             tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)BrightnessBar).EndInit();
@@ -763,14 +768,9 @@
             ((System.ComponentModel.ISupportInitialize)B_Track).EndInit();
             ((System.ComponentModel.ISupportInitialize)G_Track).EndInit();
             ((System.ComponentModel.ISupportInitialize)R_Track).EndInit();
+            Options.ResumeLayout(false);
             tabPage2.ResumeLayout(false);
             tabPage2.PerformLayout();
-            menuStrip1.ResumeLayout(false);
-            menuStrip1.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
-            RenderView.ResumeLayout(false);
-            RenderView.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -779,22 +779,6 @@
 
         private PictureBox Canvas;
         private Panel panel1;
-        private TabControl Options;
-        private TabPage tabPage1;
-        private Label label1;
-        private TrackBar R_Track;
-        private Label label3;
-        private Label label6;
-        private TrackBar B_Track;
-        private Label label5;
-        private TrackBar G_Track;
-        private Label label4;
-        private TrackBar Saturation_t;
-        private Button button4;
-        private Button UndoSaturation;
-        private Button button5;
-        private TrackBar gamma_Track;
-        private Label label2;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem fileToolStripMenuItem;
         private ToolStripMenuItem openToolStripMenuItem;
@@ -808,32 +792,48 @@
         private ToolStripMenuItem centerToolStripMenuItem;
         private ToolStripMenuItem backgroundColorToolStripMenuItem;
         private ToolStripMenuItem colorToolStripMenuItem;
-        private TabPage tabPage2;
-        private Label ImWid;
-        private Button button7;
-        private Label label7;
-        private TextBox imwidht;
-        private Label ImHei;
-        private TextBox imheight;
         private Panel panel2;
         private Label info;
-        private CheckBox MirrorEffect;
-        private Label label12;
-        private CheckBox verticalflip;
-        private Button button1;
-        private Button button2;
-        private TrackBar BrightnessBar;
-        private Label label8;
-        private CheckBox BlackOnly;
-        private CheckBox Invert;
         private Label Remaning;
         private ToolStripMenuItem settingsToolStripMenuItem;
         private ToolStripMenuItem visualSettingsToolStripMenuItem;
         private Panel RenderView;
         private Button button6;
         private CheckBox checkBox1;
-        private Panel panel3;
-        private Button button3;
         private Label taskinf;
+        private TabPage tabPage1;
+        private Button button3;
+        private Panel panel3;
+        private Button button2;
+        private TrackBar BrightnessBar;
+        private Label label8;
+        private Button button5;
+        private TrackBar gamma_Track;
+        private Label label2;
+        private Button button4;
+        private Button UndoSaturation;
+        private TrackBar Saturation_t;
+        private Label label6;
+        private TrackBar B_Track;
+        private Label label5;
+        private TrackBar G_Track;
+        private Label label4;
+        private Label label3;
+        private TrackBar R_Track;
+        private Label label1;
+        private TabControl Options;
+        private TabPage tabPage2;
+        private CheckBox Invert;
+        private CheckBox BlackOnly;
+        private Button button1;
+        private CheckBox verticalflip;
+        private CheckBox MirrorEffect;
+        private Label label12;
+        private Label ImHei;
+        private TextBox imheight;
+        private TextBox imwidht;
+        private Label ImWid;
+        private Button button7;
+        private Label label7;
     }
 }
