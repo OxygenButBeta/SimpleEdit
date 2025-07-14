@@ -1,8 +1,32 @@
-# Image Editing Experiment in WinForms
+# 🎨 Image Editing Experiment in WinForms
 
-This project was one of my early experiments when I first started learning C#. I used it to explore basic image editing functionality in WinForms. It primarily consists of spaghetti code and is not the most refined piece of work, but it served as a hobby project at the time.
+This project was one of my **first experiments** when I started learning C#. It’s a simple **WinForms application** for basic image editing — mostly spaghetti code, but it was a fun hobby project and a great learning experience! 🖥️✨
 
-At one point, I considered incorporating the CUDA framework to improve performance and accelerate certain image processing tasks, but I eventually decided against it and kept the project simple.
+---
 
-While the code quality may not be great, this project represents my initial steps into programming and experimenting with graphical interfaces. I’m sharing it here as a personal milestone and for anyone who might be curious about my early development journey.
+## 🚀 Features
+
+- Adjust **Saturation**  
+- Modify **Contrast**  
+- Change **Brightness**  
+- Apply **Color Balance**  
+- Resize images  
+- Mirror & Flip (Vertical & Horizontal)  
+- Invert Colors  
+- Convert to **Black and White**  
+- Various simple effects for image manipulation  
+
+---
+
+## 💡 About
+
+At one point, I considered integrating **CUDA** for performance boosts on heavy image processing tasks but ultimately kept it simple to focus on learning fundamentals.  
+
+Though the code quality isn’t perfect, this project marks an important milestone in my programming journey — a hands-on way to understand graphics and WinForms. Sharing it here for anyone curious about my early development steps! 🎉
+
+---
+
+## 📸 Screenshot
+
 ![Screenshot](sedit.png)
+
